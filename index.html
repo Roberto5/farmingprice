@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="it">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#173b2f">
+	<title>Estrai dati XML</title>
+	<link rel="stylesheet" href="style.css">
+    <script src="data.js"></script>
+	<script src="main.js" defer></script>
+</head>
+<body>
+	<header class="topbar">
+		<a class="brand" href="#" aria-label="FarmingPrice, pagina iniziale">
+			<span class="brand-mark" aria-hidden="true">F</span>
+			<span>Farming<span class="brand-light">Price</span></span>
+		</a>
+		<span class="topbar-note">STRUMENTI / XML</span>
+	</header>
+
+	<main class="workspace">
+		<section class="intro" aria-labelledby="page-title">
+			<p class="eyebrow">ANALISI DATI</p>
+			<h1 id="page-title">Estrai i tipi di prodotto</h1>
+			<p class="intro-copy">Incolla il contenuto XML oppure seleziona un file per estrarre gli attributi <code>fillType</code>.</p>
+		</section>
+
+		<section class="extractor" aria-label="Input XML">
+			<label class="field-label" for="xml-input">Codice XML</label>
+			<textarea id="xml-input" spellcheck="false" placeholder="Incolla qui il codice XML…"></textarea>
+
+			<div class="form-actions">
+				<label class="upload-control" for="xml-file">
+					<span aria-hidden="true">↑</span>
+					<span id="file-label">Carica un file XML</span>
+				</label>
+				<input id="xml-file" type="file" accept=".xml,application/xml,text/xml">
+				<button id="extract-button" type="button">Estrai <span aria-hidden="true">→</span></button>
+			</div>
+		</section>
+
+		<section class="results-section" aria-labelledby="results-title">
+			<div class="results-heading">
+				<h2 id="results-title">Risultati</h2>
+				<span id="result-count" class="result-count" aria-live="polite">In attesa di XML</span>
+			</div>
+			<div id="result" aria-live="polite">
+				<p class="empty-state">I tipi di prodotto estratti appariranno qui.</p>
+			</div>
+		</section>
+	</main>
+</body>
+</html>
