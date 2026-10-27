@@ -75,7 +75,7 @@ body {
 }
 
 .workspace {
-	width: min(100% - 40px, 820px);
+	width: min(100% - 40px, 1520px);
 	margin: 68px auto 96px;
 }
 
@@ -264,8 +264,74 @@ h2 {
 }
 
 #result {
-	max-height: 460px;
-	overflow: auto;
+	margin-top: 16px;
+}
+
+.month-table-wrap {
+	margin-top: 16px;
+	overflow-x: auto;
+	border: 1px solid var(--line);
+	background: var(--surface);
+}
+
+.month-table {
+	width: 100%;
+	min-width: 1080px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+
+.month-table th,
+.month-table td {
+	width: 8.333%;
+	padding: 10px 8px;
+	border-right: 1px solid var(--line);
+	border-bottom: 1px solid var(--line);
+	text-align: left;
+	vertical-align: top;
+}
+
+.month-table th {
+	position: sticky;
+	top: 0;
+	color: #fff;
+	background: var(--forest);
+	font-size: 11px;
+	font-weight: 700;
+	text-transform: capitalize;
+}
+
+.month-table td {
+	min-height: 54px;
+	font-size: 12px;
+}
+
+.month-product-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.month-product {
+	margin: 0 0 6px;
+	padding: 6px;
+	border-left: 2px solid var(--forest-soft);
+	color: var(--forest);
+	background: #f1f5ef;
+	font-weight: 650;
+	cursor: help;
+}
+
+.month-product:hover,
+.month-product:focus-visible {
+	background: #e2e9df;
+	outline: 2px solid var(--forest-soft);
+	outline-offset: 1px;
+}
+
+.month-empty {
+	color: #a0aaa2;
+	text-align: center !important;
 }
 
 .empty-state {
